@@ -63,14 +63,15 @@ print(f"Distance = {hamming_distance(input1, input2)}")
 
 def last_letters(sentence):
    encode=""
-
    #1. How to iterature through the characters
-
+   for pos in range(0, len(sentence)):
    #how can we know the last letter of each word?
    #"wingardium levios makes objects float"
-
+        if sentence[pos + 1] == " ":
+           encode +=sentence[pos]
    #3. How do we store the last characters and output it.
-
-   return encode
+   return encode + sentence[-1]
+user_input = input("enter a spell")
+print(f"Encoded spell is {last_letters(user_input)}")
 
    
